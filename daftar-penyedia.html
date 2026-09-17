@@ -11,36 +11,41 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <a href="#konten-utama">Lewati ke konten utama</a>
+        <a class="skip-link" href="#konten-utama">Lewati ke konten utama</a>
 
-        <header>
-            <p><strong>SisaBaik</strong></p>
-            <nav aria-label="Navigasi utama">
-                <ul>
-                    <li><a href="index.html">Beranda</a></li>
-                    <li>
-                        <a href="daftar-penyedia.html" aria-current="page">
-                            Daftar sebagai penyedia
-                        </a>
-                    </li>
-                    <li><a href="tawarkan-makanan.html">Tawarkan makanan</a></li>
-                </ul>
-            </nav>
+        <header class="site-header">
+            <div class="container header-layout">
+                <p class="brand">SisaBaik</p>
+                <nav aria-label="Navigasi utama">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li>
+                            <a href="daftar-penyedia.html" aria-current="page">
+                                Daftar sebagai penyedia
+                            </a>
+                        </li>
+                        <li><a href="tawarkan-makanan.html">Tawarkan makanan</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
-        <main id="konten-utama" tabindex="-1">
-            <h1>Daftar sebagai penyedia SisaBaik</h1>
-            <p>
-                Gunakan data fiktif selama praktikum. Formulir ini belum terhubung ke server dan basis data.
-            </p>
-            <p id="petunjuk-wajib">Kolom bertanda <strong>*</strong> wajib diisi.</p>
+        <main class="container" id="konten-utama" tabindex="-1">
+            <div class="page-heading">
+                <h1>Daftar sebagai penyedia SisaBaik</h1>
+                <p class="lead">
+                    Gunakan data fiktif selama praktikum. Formulir ini belum terhubung ke server dan basis data.
+                </p>
+                <p  class="required-note" id="petunjuk-wajib">Kolom bertanda <strong>*</strong> wajib diisi.</p>
+            </div>
 
             <form
+            class="form-card"
             action="daftar-penyedia.html"
             method="get"
             aria-describedby="petunjuk-wajib"
             >
-            <fieldset>
+            <fieldset class="form-section">
                 <legend>Informasi usaha</legend>
 
                 <p>
@@ -58,15 +63,15 @@
 
                 <p>
                     <label for="jenis-usaha">Jenis usaha *</label><br>
-                    <select id="jenis-usaha" name="jenis_usaha" required>
+                    <section id="jenis-usaha" name="jenis_usaha" required>
                         <option value="">Pilih jenis usaha</option>
                         <option value="restoran">Restoran</option>
                         <option value="toko-roti">Toko roti</option>
-                        <option value="katering">Katering</option>
+                        <option value="katering">katering</option>
                         <option value="ritel">Toko ritel</option>
                         <option value="hotel">Hotel atau penginapan</option>
                         <option value="lainnya">Lainnya</option>
-                    </select>
+                    </section>
                 </p>
 
                 <p>
@@ -84,7 +89,7 @@
                 </p>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="form-section">
                 <legend>Penanggung jawab</legend>
 
                 <p>
@@ -101,7 +106,7 @@
                 </p>
 
                 <p>
-                    <label for="email">Alamat email*</label><br>
+                    <label for="email">Alamat email *</label><br>
                     <input
                     type="email"
                     id="email"
@@ -132,7 +137,7 @@
                 </p>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="form-section">
                 <legend>Lokasi usaha</legend>
 
                 <p>
@@ -188,7 +193,7 @@
                 </p>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="form-section">
                 <legend>Persetujuan</legend>
                 <p>
                     <input
@@ -204,22 +209,24 @@
                 </p>
             </fieldset>
 
-            <p>
-                <button type="submit">Kirim pendaftaran latihan</button>
-                <button type="reset">Kosongkan formulir</button>
+            <p class="form-actions">
+                <button class="button" type="submit">Kirim pendaftaran latihan</button>
+                <button class="button button-secondary" type="reset">Kosongkan formulir</button>
             </p>
-        </form>
+            </form>
 
-        <section aria-labelledby="catatan-prototipe">
-            <h2 id="catatan-prototipe">Apa yang terjadi setelah tombol dikirim?</h2>
-            <p>
-                Browser memeriksa atribut validasi HTML terlebih dahulu. Jika semua input valid, halaman dimuat ulang dan pasangan nama-nilai terlihat pada alamat halaman. Data belum disimpan. Pada chapter backend, metode sementara ini akan diganti dengan pengiriman ke server.
-            </p>
-        </section>
+            <section class="section" aria-labelledby="catatan-prototipe">
+                <h2 id="catatan-prototipe">Apa yang terjadi setelah tombol dikirim?</h2>
+                <p>
+                    Browser memeriksa atribut validasi HTML terlebih dahulu. Jika semua input valid, halaman dimuat ulang dan pasangan nama-nilai terlihat pada alamat halaman. Data belum disimpan. Pada chapter backend, metode sementara ini akan diganti dengan pengiriman ke server.
+                </p>
+            </section>
         </main>
 
-        <footer>
-            <p>&copy; 2026 SisaBaik - Proyek pembelajaran Pengembangan Web.</p>
+        <footer class="site-footer">
+            <div class="container footer-layout">
+                <p>&copy; 2026 SisaBaik - Proyek pembelajaran Pengembangan Web.</p>
+            </div>
         </footer>
     </body>
 </html>
