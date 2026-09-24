@@ -28,7 +28,7 @@ async function siapkanKatalog() {
         function perbaruiTampilan() {
             const kata = inputCari.value.trim().toLowerCase();
             const kategori = pilihKategori.value;
-            const hasil = penawaran.filter((item)) => {
+            const hasil = penawaran.filter((item) => {
                 const cocokKata = `${item.nama} ${item.penyedia}`.toLowerCase().includes(kata);
                 const cocokKategori = kategori === "semua" || item.kategori === kategori;
                 return cocokKata && cocokKategori;
